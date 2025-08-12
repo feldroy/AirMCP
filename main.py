@@ -1,6 +1,4 @@
 import air
-from starlette.requests import Request
-from starlette.responses import JSONResponse
 import air_convert
 
 from fastmcp import FastMCP
@@ -15,8 +13,8 @@ def convert_html_to_airtags(html: str) -> str:
 
 
 @mcp.custom_route("/health", methods=["GET"])
-async def health_check(request: Request):
-    return JSONResponse({"status": "healthy"})
+async def health_check(request: air.Request):
+    return air.responses.JSONResponse({"status": "healthy"})
 
 
 http_app = mcp.http_app(path="/")
