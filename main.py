@@ -5,20 +5,7 @@ import air_convert
 
 from fastmcp import FastMCP
 
-mcp = FastMCP("MyServer")
-
-@mcp.tool
-def hello(name: str) -> str:
-    return f"Hello, {name}!"
-
-
-
-mcp = FastMCP("MyServer")
-
-@mcp.tool
-def add(a: int, b: int) -> int:
-    'Add two ints together.'
-    return a+b
+mcp = FastMCP("Air")
 
 @mcp.tool
 def convert_html_to_airtags(html: str) -> str:
