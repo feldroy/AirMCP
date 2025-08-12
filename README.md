@@ -8,7 +8,7 @@ Configuring Gemini to use local version of AirMCP
   "selectedAuthType": "gemini-api-key",
   "preferredEditor": "vscode",
   "mcpServers": {
-      "AirMCP": {
+      "Air": {
         "command": "uv",
         "args": [
           "run",
@@ -20,6 +20,21 @@ Configuring Gemini to use local version of AirMCP
         ],
         "timeout": 5000
       }
+  }
+}
+```
+
+Configuring Gemini to use the hosted version of AirMCP:
+
+```json
+{
+  "theme": "Dracula",
+  "selectedAuthType": "gemini-api-key",
+  "preferredEditor": "vscode",
+  "mcpServers": {
+    "Air": {
+        "httpUrl": "https://airmcp.fastapicloud.dev/mcp"
+    }
   }
 }
 ```

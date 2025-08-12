@@ -1,6 +1,7 @@
 import air
 from starlette.requests import Request
 from starlette.responses import JSONResponse
+import air_convert
 
 from fastmcp import FastMCP
 
@@ -18,6 +19,11 @@ mcp = FastMCP("MyServer")
 def add(a: int, b: int) -> int:
     'Add two ints together.'
     return a+b
+
+@mcp.tool
+def convert_html_to_airtags(html: str) -> str:
+    'Converts HTML to Air Tags formatted by Ruff'
+    return air_convert.html_to_airtags(html)
 
 @mcp.custom_route("/health", methods=["GET"])
 async def health_check(request: Request):
