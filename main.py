@@ -16,6 +16,7 @@ mcp = FastMCP("MyServer")
 
 @mcp.tool
 def add(a: int, b: int) -> int:
+    'Add two ints together.'
     return a+b
 
 @mcp.custom_route("/health", methods=["GET"])
