@@ -40,7 +40,7 @@ async def index():
                     "https://airmcp.fastapicloud.dev/mcp", class_="copy-on-click"
                 ),
                 air.P(
-                    air.Small("Click the URL to copy it"), style="text-align: center"
+                    air.Small("Click the URL to copy it. More tools coming soon!"), style="text-align: center"
                 ),
             )
         ),

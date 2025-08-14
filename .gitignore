@@ -82,3 +82,12 @@ nbs
 .cursor/
 .vscode/
 .idea/
+
+
+# START Ruler Generated Files
+*.bak
+.gemini/settings.json
+.gemini/settings.json.bak
+GEMINI.md
+GEMINI.md.bak
+# END Ruler Generated Files
